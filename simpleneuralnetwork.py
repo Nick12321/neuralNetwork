@@ -6,7 +6,8 @@ synapticWeights = 2 * random.random((3, 1)) - 1 #set random weight
 for iteration in range(10000):
 	#calculate the neuron output
 	output = 1 / (1 + exp(-(dot(inputs, synapticWeights))))
-	#Adjust the wight
+	#Adjust the weight
 	synapticWeights += dot(inputs.T, (outputs - output) * output * (1 - output))
 #Reduce the synapticWeights to 1x1 array and normalize for final answer!
 print(1 / (1 + exp(-(dot(array([1, 0, 0]), synapticWeights)))))
+# Next step add JSON input
